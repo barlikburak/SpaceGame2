@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-image: url('/view/resources/background.png');" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.FXMLLoginController">
+   <children>
+      <ImageView fx:id="logo" fitHeight="200.0" fitWidth="400.0" layoutX="200.0" layoutY="35.0" onMouseEntered="#mouseEnteredLogo" onMouseExited="#mouseExitedLogo" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@resources/space_game.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="registerAnchorPane" layoutX="100.0" layoutY="120.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-size: 600 400; -fx-background-image: url('/view/resources/panel.png'); -fx-background-repeat: no-repeat;" translateX="700.0">
+         <children>
+            <TextField fx:id="fieldAd" layoutX="220.0" layoutY="75.0" prefHeight="26.0" prefWidth="223.0" />
+            <TextField fx:id="fieldSoyad" layoutX="220.0" layoutY="125.0" prefHeight="26.0" prefWidth="223.0" />
+            <TextField fx:id="fieldEPostaKayit" layoutX="220.0" layoutY="175.0" prefHeight="26.0" prefWidth="223.0" />
+            <TextField fx:id="fieldSifreKayit" layoutX="220.0" layoutY="225.0" prefHeight="26.0" prefWidth="223.0" />
+            <Button fx:id="buttonKayit" layoutX="369.0" layoutY="324.0" mnemonicParsing="false" onMousePressed="#mouseButtonKayitPressed" onMouseReleased="#mouseButtonKayitReleased" prefHeight="26.0" prefWidth="69.0" style="-fx-background-image: url('/view/resources/button.png'); -fx-background-color: transparent; -fx-background-size: 69 26;" text="Sign Up" />
+            <Text layoutX="150.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" />
+            <Text layoutX="150.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
+            <Text layoutX="150.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-Mail:" />
+            <Text layoutX="150.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Surname:" />
+            <Hyperlink fx:id="loginLink" layoutX="150.0" layoutY="325.0" onAction="#mouesLoginLinkAction" text="Already Have an Account?" />
+            <Text layoutX="275.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up" />
+            <TextField fx:id="fieldYas" layoutX="219.0" layoutY="275.0" prefHeight="26.0" prefWidth="223.0" />
+            <Text layoutX="150.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age:" />
+            <Text fx:id="uyariKayit" fill="RED" layoutX="225.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bilgileri Düzgün Giriniz!" textAlignment="CENTER" visible="false" wrappingWidth="222.99999296665192">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="loginAnchorPane" layoutX="100.0" layoutY="120.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-size: 600 400; -fx-background-image: url('/view/resources/panel.png'); -fx-background-repeat: no-repeat;">
+         <children>
+            <TextField fx:id="fieldEPosta" layoutX="200.0" layoutY="100.0" prefHeight="26.0" prefWidth="200.0" promptText="e-mail" />
+            <PasswordField fx:id="fieldSifre" layoutX="200.0" layoutY="150.0" prefWidth="200.0" promptText="password" />
+            <Button fx:id="buttonGiris" layoutX="335.0" layoutY="230.0" minHeight="26.0" mnemonicParsing="false" onMouseEntered="#mouseButtonGirisEntered" onMouseExited="#mouseButtonGirisExited" onMousePressed="#mouseButtonGirisPressed" onMouseReleased="#mouseButtonGirisReleased" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: transparent; -fx-background-image: url('/view/resources/button.png'); -fx-background-size: 65 26;" text="Sign in" />
+            <Hyperlink fx:id="registerLink" layoutX="200.0" layoutY="230.0" onAction="#mouseRegisterLinkAction" text="No Account?" />
+            <Text layoutX="196.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign In" textAlignment="CENTER" wrappingWidth="200.0" />
+            <RadioButton fx:id="radioAdmin" layoutX="200.0" layoutY="190.0" maxWidth="100.0" mnemonicParsing="false" onAction="#mouseRadioAdminAction" prefHeight="18.0" prefWidth="100.0" text="Admin" />
+            <RadioButton fx:id="radioOyuncu" layoutX="335.0" layoutY="191.0" maxWidth="100.0" mnemonicParsing="false" onAction="#mouseRadioOyuncuAction" text="Player" />
+            <Text fx:id="uyari" fill="RED" layoutX="200.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YANLIŞ GİRİŞ YAPTINIZ!" textAlignment="CENTER" visible="false" wrappingWidth="199.99998807907104">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-image: url('/view/resources/background.png');" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.FXMLAdminViewManagerController">
+   <children>
+      <ImageView fx:id="logo" fitHeight="200.0" fitWidth="400.0" layoutX="460.0" layoutY="60.0" onMouseEntered="#mouseEnteredLogo" onMouseExited="#mouseExitedLogo" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@resources/space_game.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="exitButton" layoutX="110.0" layoutY="560.0" mnemonicParsing="false" onMouseEntered="#mouseEnteredExitButton" onMouseExited="#mouseExitedExitButton" onMousePressed="#mousePressedExitButton" onMouseReleased="#mouseReleasedExitButton" prefHeight="49.0" prefWidth="190.0" style="-fx-background-color: transparent; -fx-background-image: url('/view/resources/button.png');" text="EXIT">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="pointsButton" layoutX="110.0" layoutY="460.0" mnemonicParsing="false" onMouseEntered="#mouseEnteredPointsButton" onMouseExited="#mouseExitedPointsButton" onMousePressed="#mousePressedPointsButton" onMouseReleased="#mouseReleasedPointsButton" prefHeight="49.0" prefWidth="190.0" style="-fx-background-color: transparent; -fx-background-image: url('/view/resources/button.png');" text="POINTS">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="helpButton" layoutX="110.0" layoutY="360.0" mnemonicParsing="false" onMouseEntered="#mouseEnteredHelpButton" onMouseExited="#mouseExitedHelpButton" onMousePressed="#mousePressedHelpButton" onMouseReleased="#mouseReleasedHelpButton" prefHeight="49.0" prefWidth="190.0" style="-fx-background-color: transparent; -fx-background-image: url('/view/resources/button.png');" text="HELP">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="oyuncuButton" focusTraversable="false" layoutX="110.0" layoutY="260.0" mnemonicParsing="false" onMouseEntered="#mouseEnteredOyuncuButton" onMouseExited="#mouseExitedOyuncuButton" onMousePressed="#mousePressedOyuncuButton" onMouseReleased="#mouseReleasedOyuncuButton" prefHeight="49.0" prefWidth="190.0" style="-fx-background-color: transparent; -fx-background-image: url('/view/resources/button.png');" text="PLAYER">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="adminButton" layoutX="110.0" layoutY="160.0" mnemonicParsing="false" onMouseEntered="#mouseEnteredAdminButton" onMouseExited="#mouseExitedAdminButton" onMousePressed="#mousePressedAdminButton" onMouseReleased="#mouseReleasedAdminButton" prefHeight="49.0" prefWidth="190.0" style="-fx-background-color: transparent; -fx-background-image: url('/view/resources/button.png');" text="ADMIN">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <AnchorPane fx:id="pointsPane" layoutX="360.0" layoutY="190.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-size: 600 400; -fx-background-image: url('/view/resources/panel.png'); -fx-background-repeat: no-repeat;" translateX="700.0">
+         <children>
+            <Text fill="RED" layoutX="81.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 18;" text="NAME" />
+            <Text fill="RED" layoutX="267.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 18;" text="POINTS" />
+            <Text fill="RED" layoutX="470.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 18;" text="TIME" />
+            <ListView fx:id="listViewPoints" layoutX="34.0" layoutY="77.0" prefHeight="283.0" prefWidth="540.0" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="helpPane" layoutX="370.0" layoutY="200.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-size: 600 400; -fx-background-image: url('/view/resources/panel.png'); -fx-background-repeat: no-repeat;" translateX="700.0">
+         <children>
+            <TextArea fx:id="textAreaUpdate" layoutX="50.0" layoutY="50.0" prefHeight="275.0" prefWidth="500.0" />
+            <Button fx:id="updateHelpButton" layoutX="479.0" layoutY="347.0" mnemonicParsing="false" onMouseEntered="#mouseEnteredUpdateHelpButton" onMouseExited="#mouseExitedUpdateHelpButton" onMousePressed="#mousePressedUpdateHelpButton" onMouseReleased="#mouseReleasedUpdateHelpButton" style="-fx-background-size: 71 26; -fx-background-image: url('/view/resources/button.png'); -fx-background-color: transparent;" text="UPDATE" />
+            <Text fx:id="updateHelpText" fill="RED" layoutX="50.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SUCCESSFUL!" visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="271.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HELP">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+      <AnchorPane fx:id="playerPane" layoutX="380.0" layoutY="210.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-size: 600 400; -fx-background-image: url('/view/resources/panel.png'); -fx-background-repeat: no-repeat;" translateX="700.0">
+         <children>
+            <Text fill="RED" layoutX="163.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name - Surname - Age - Score">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <ListView fx:id="listViewPlayer" layoutX="14.0" layoutY="52.0" prefHeight="332.0" prefWidth="577.0" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="adminPane" layoutX="390.0" layoutY="220.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-size: 600 400; -fx-background-image: url('/view/resources/panel.png'); -fx-background-repeat: no-repeat;" translateX="700.0">
+         <children>
+            <Text fill="RED" layoutX="154.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name - Surname - EMail - Phone">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <ListView fx:id="listViewAdmin" layoutX="30.0" layoutY="44.0" prefHeight="294.0" prefWidth="540.0" />
+            <Hyperlink fx:id="linkInsert" layoutX="30.0" layoutY="354.0" onAction="#linkInsertClicked" text="Insert" />
+            <Hyperlink fx:id="linkUpdate" layoutX="512.0" layoutY="354.0" onAction="#linkUpdateClicked" text="Update" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="updateAndInsertPane" layoutX="360.0" layoutY="190.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-size: 600 400; -fx-background-image: url('/view/resources/panel.png'); -fx-background-repeat: no-repeat;" translateX="700.0">
+         <children>
+            <TextField fx:id="email" layoutX="230.0" layoutY="162.0" />
+            <TextField fx:id="surname" layoutX="230.0" layoutY="102.0" />
+            <TextField fx:id="name" layoutX="230.0" layoutY="42.0" />
+            <TextField fx:id="phone" layoutX="230.0" layoutY="222.0" />
+            <TextField fx:id="password" layoutX="230.0" layoutY="282.0" />
+            <Text layoutX="150.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" />
+            <Text layoutX="150.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
+            <Text layoutX="150.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone:" />
+            <Text layoutX="150.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-Mail:" />
+            <Text layoutX="150.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Surname:" />
+            <Button fx:id="updateAndInsertButton" layoutX="335.0" layoutY="325.0" maxHeight="26.0" maxWidth="66.0" minHeight="26.0" minWidth="66.0" mnemonicParsing="false" onMouseEntered="#mouseEnteredUpdateAndInsertButton" onMouseExited="#mouseExitedUpdateAndInsertButton" onMousePressed="#mousePressedUpdateAndInsertButton" onMouseReleased="#mouseReleasedUpdateAndInsertButton" prefHeight="26.0" prefWidth="66.0" style="-fx-background-size: 66 26; -fx-background-image: url('/view/resources/button.png'); -fx-background-color: transparent;" text="Update" textAlignment="CENTER" />
+            <Text fx:id="successful" fill="RED" layoutX="230.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SUCCESSFUL!">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
